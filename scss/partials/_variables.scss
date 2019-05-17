@@ -1,13 +1,45 @@
 // Colors
-$base-dark: #111;
+$base-dark: #111 !default;
 // $base-light:
 
-$light-red: #ce1717;
-$dark-red: #900202;
+$light-red: #ce1717 !default;
+$dark-red: #900202 !default;
+$button-red: #cb5e4c !default;
 
 // Typography
 
-$monospace: 'Roboto Mono', monospace;
-$sans-serif: 'Ubuntu', sans-serif;
+$font-family-monospace: 'Roboto Mono', monospace !default;
+$font-family-sans-serif: 'Ubuntu', sans-serif !default;
+$font-size-base: 1rem !default;
+$line-height-base: 1.5 !default;
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 700 !default;
+
+$h1-font-size: $font-size-base * 2.5 !default;
+$h2-font-size: $font-size-base * 2 !default;
+$h3-font-size: $font-size-base * 1.75 !default;
+$h4-font-size: $font-size-base * 1.5 !default;
+$h5-font-size: $font-size-base * 1.25 !default;
+$h6-font-size: $font-size-base !default;
 
 // Media breakpoints
+
+$breakpoint-small: 576px !default;
+$breakpoint-medium: 768px !default;
+$breakpoint-large: 1200px !default;
+
+@mixin respond-to($media) {
+  @if $media == mobile-only {
+    @media only screen and (max-width: $breakpoint-small) { @content; }
+  }
+  @if $media == desktop-and-up {
+    @media only screen and (min-width: $breakpoint-small + 1) { @content; }
+  }
+  @else if $media == medium-desktop-only {
+    @media only screen and (min-width: $breakpoint-small + 1) and (max-width: $breakpoint-large - 1) { @content; }
+  }
+  @else if $media == wide-desktop-and-up {
+    @media only screen and (min-width: $breakpoint-large) { @content; }
+  }
+}

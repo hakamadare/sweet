@@ -1,5 +1,107 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700|Ubuntu:300,300i,400,400i,500,500i,700,700i|Inconsolata:400,700");
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
 body {
-  font-face: sans-serif;
-  font-size: 16px; }
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.fixed-navbar {
+  background: #fff;
+  border-bottom-color: #ce1717;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); }
+
+body {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 400;
+  font-family: "Ubuntu", sans-serif; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 400;
+  margin-bottom: .5rem; }
+
+h1 {
+  font-size: 2.5rem; }
+
+h2 {
+  font-size: 2rem; }
+
+h3 {
+  font-size: 1.75rem; }
+
+h4 {
+  font-size: 1.5rem; }
+
+h5 {
+  font-size: 1.25rem; }
+
+h6 {
+  font-size: 1rem; }
+
+p {
+  margin-bottom: 1rem; }
+
+.fixed-navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: .75rem;
+  border-bottom: 2px solid; }
+  .fixed-navbar .navbar-user-image {
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+    border: 1px solid transparent; }
+  @media only screen and (min-width: 577px) {
+    .fixed-navbar .nav-links-container--mobile {
+      display: none; } }
+  .fixed-navbar .nav-links-container--desktop {
+    display: none; }
+    @media only screen and (min-width: 577px) {
+      .fixed-navbar .nav-links-container--desktop {
+        display: block; } }
 
 /*# sourceMappingURL=style.css.map */
