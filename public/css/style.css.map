@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,IAAK;EACH,SAAS,EAAE,UAAU;EACrB,SAAS,EAAE,IAAI",
+"sources": ["../../scss/partials/_layout.scss"],
+"names": [],
+"file": "style.css"
+}
