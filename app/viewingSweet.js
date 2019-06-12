@@ -492,6 +492,15 @@ module.exports = function (app) {
     return;
   })
 
+  app.get('/code-of-conduct', function (req, res) {
+      var markdown = fs.readFileSync(global.appRoot + '/public/codeofconduct.md', 'utf8');
+      var html = marked(markdown.toString());
+      res.render('codeofconduct', {
+          loggedIn: req.isAuthenticated(),
+          loggedInUserData: req.user,
+          text: html
+      })
+  })
 
 
   //Responds to requests for posts for feeds. API method, used within the public pages.
@@ -947,7 +956,7 @@ module.exports = function (app) {
               comment.canDelete = true;
             }
           });
-          
+
           if (req.isAuthenticated() && req.params.context=="single"){
             // Mark associated notifications read if post is visible
             notifier.markRead(loggedInUserData._id, displayContext._id)
